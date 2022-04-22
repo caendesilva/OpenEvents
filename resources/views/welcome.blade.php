@@ -13,16 +13,14 @@
                     <div class="flex items-center justify-start w-1/4 h-full pr-4">
                         <a href="#_" class="inline-block py-4 md:py-0">
                             <span class="p-1 text-xl font-black leading-none text-gray-900">
-                                <span>{{ config('app.name') }}</span>
-                                <span class="text-indigo-600">.</span>
+                                <span>{{ config('app.name') }}</span><span class="text-indigo-600">.</span>
                             </span>
                         </a>
                     </div>
                     <div class="top-0 left-0 items-start hidden w-full h-full p-4 text-sm bg-gray-900 bg-opacity-50 md:items-center md:w-3/4 lg:text-base md:bg-transparent md:p-0 md:relative md:flex" :class="{'flex fixed': showMenu, 'hidden': !showMenu }">
                         <div class="flex-col w-full h-auto justify-end overflow-hidden bg-white rounded-lg md:bg-transparent md:overflow-visible md:rounded-none md:relative md:flex md:flex-row">
                             <a href="#_" class="inline-flex items-center w-auto h-16 px-6 text-xl font-black leading-none text-gray-900 md:hidden"
-                                >tails
-                                <span class="text-indigo-600">.</span>
+                                >{{ config('app.name') }}<span class="text-indigo-600">.</span>
                             </a>
                             <div class="flex flex-col items-start justify-end w-full space-x-6 text-center lg:space-x-8 md:w-2/3 md:mt-0 md:flex-row md:items-center">
                                 <a href="#_" class="inline-block w-full py-2 mx-0 ml-6 font-medium text-left text-indigo-600 md:ml-0 md:w-auto md:px-0 md:mx-2 lg:mx-3 md:text-center">Home</a>
