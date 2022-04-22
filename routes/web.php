@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProjectViewController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,3 +27,7 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::get('/projects/{project}', function (string $project) {
+    return (new ProjectViewController)->show($project); 
+})->name('projects.show');
