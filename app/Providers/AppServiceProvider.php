@@ -14,7 +14,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->singleton('HumanoIDGenerator', function ($app) {
+            return new HumanoIDGenerator($app->make(HumanoIDGenerator::class));
+        });
     }
 
     /**
@@ -24,8 +26,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->app->singleton('HumanoIDGenerator', function ($app) {
-            return new HumanoIDGenerator($app->make(HumanoIDGenerator::class));
-        });
+        //
     }
 }
