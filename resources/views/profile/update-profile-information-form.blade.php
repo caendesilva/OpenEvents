@@ -65,6 +65,17 @@
             <x-jet-input id="email" type="email" class="mt-1 block w-full" wire:model.defer="state.email" />
             <x-jet-input-error for="email" class="mt-2" />
         </div>
+
+
+        <!-- ID -->
+        <div class="col-span-6 sm:col-span-4">
+            <hr class="mt-2 mb-6">
+            <x-jet-label for="id">
+                {{ __('Your Project ID') }} <sup title="This currently cannot be changed">(readonly)</sup>
+            </x-jet-label>
+            <x-jet-input id="id" type="text" class="mt-1 block w-full" value="{{ Auth::user()->humanoID() }}" readonly/>
+            <small>{{ __('This is the identifier used for your event metrics dashboard and API endpoint.') }}</small>
+        </div>
     </x-slot>
 
     <x-slot name="actions">
