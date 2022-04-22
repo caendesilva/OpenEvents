@@ -143,13 +143,13 @@
                 </h3>
                 <div class="prose max-w-fit">
                     @markdown
-                    Start by [creating an account]({{ route('register') }}). Then you need to create an API token and a
-                    project.
+                    Start by [creating an account]({{ route('register') }}) for your project.
 
-                    > Note that currently the API tokens will give write access to all your projects.
+                    > If you want to have multiple projects, you need to create an account for each one.
 
-                    Once you have created your project, you can start tracking your events using your project's API
-                    endpoint.
+                    Then you need to create an API token to authenticate requests.
+
+                    Now you can start tracking your events using your project's API endpoint.
 
                     Some ideas of events you can track:
 
