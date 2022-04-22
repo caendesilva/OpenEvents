@@ -58,4 +58,9 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    public function humanoID()
+    {
+        return app('HumanoIDGenerator')->generator->create($this->id);
+    }
 }
