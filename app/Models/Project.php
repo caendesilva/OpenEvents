@@ -27,6 +27,11 @@ class Project
 		return $this->user->events();
 	}
 
+	public function getEndpoint(): string
+	{
+		return route('events.store', ['project' => $this->id]);
+	}
+
 	public static function all(): Collection
 	{
 		return User::all();

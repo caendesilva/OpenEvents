@@ -66,15 +66,27 @@
             <x-jet-input-error for="email" class="mt-2" />
         </div>
 
+        <div class="col-span-6 sm:col-span-4">
+            <hr class="my-2 mb-6">
+        </div>
 
         <!-- ID -->
         <div class="col-span-6 sm:col-span-4">
-            <hr class="mt-2 mb-6">
             <x-jet-label for="id">
                 {{ __('Your Project ID') }} <sup title="This currently cannot be changed">(readonly)</sup>
             </x-jet-label>
             <x-jet-input id="id" type="text" class="mt-1 block w-full" value="{{ Auth::user()->humanoID() }}" readonly/>
             <small>{{ __('This is the identifier used for your event metrics dashboard and API endpoint.') }}</small>
+        </div>
+        
+
+        <!-- Endpoint -->
+        <div class="col-span-6 sm:col-span-4">
+            <x-jet-label for="id">
+                {{ __('Event API Endpoint') }} <sup title="This cannot be changed">(readonly)</sup>
+            </x-jet-label>
+            <x-jet-input id="id" type="text" class="mt-1 block w-full" value="{{ Auth::user()->project()->getEndpoint() }}" readonly/>
+            <small>{{ __('This is where you send your API requests.') }}</small>
         </div>
     </x-slot>
 
