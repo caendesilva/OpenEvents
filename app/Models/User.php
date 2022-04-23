@@ -59,6 +59,21 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
 
+    /**
+     * Get all of the events for the User.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function events(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(Event::class);
+    }
+
+    /**
+     * Return the user's HumanoID.
+     *
+     * @return string
+     */
     public function humanoID()
     {
         return app('HumanoIDGenerator')->generator->create($this->id);
