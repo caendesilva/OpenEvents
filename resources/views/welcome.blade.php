@@ -92,6 +92,10 @@
                 <h3 class="text-lg font-bold text-purple-500 sm:text-xl md:text-2xl mb-3">What data can I submit?</h3>
                 {!! \App\Core\MarkdownSection::parse('faq/what-data-can-i-submit', 'max-w-fit') !!}
             </div>
+            <div class="w-full px-6 py-6 mx-auto mt-10 bg-white border border-gray-200 rounded-lg sm:px-8 md:px-12 sm:py-8 sm:shadow lg:w-5/6 xl:w-2/3">
+                <h3 class="text-lg font-bold text-purple-500 sm:text-xl md:text-2xl mb-3">Can I download my data?</h3>
+                {!! \App\Core\MarkdownSection::parse('faq/can-i-download-my-data', 'max-w-fit') !!}
+            </div>
         </div>
     </section>
 </x-guest-layout>
