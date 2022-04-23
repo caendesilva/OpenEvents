@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProjectViewController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +33,6 @@ Route::middleware([
 Route::get('/explore', [ProjectViewController::class, 'index'])
     ->name('projects.index');
 
-Route::get('/projects/{project}', function (string $project) {
-    return (new ProjectViewController)->show($project);
+Route::get('/projects/{project}', function (string $project, Request $request) {
+    return (new ProjectViewController)->show($project, $request);
 })->name('projects.show');
