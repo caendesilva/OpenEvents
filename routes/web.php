@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProjectViewController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
@@ -15,9 +16,7 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', HomeController::class);
 
 Route::middleware([
     'auth:sanctum',
