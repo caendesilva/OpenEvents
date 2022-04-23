@@ -78,4 +78,13 @@ class User extends Authenticatable
     {
         return app('HumanoIDGenerator')->generator->create($this->id);
     }
+
+    /**
+     * Get user as a project.
+     * @return string
+     */
+    public function project(): Project
+    {
+        return new Project($this);
+    }
 }
