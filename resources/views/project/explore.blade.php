@@ -30,7 +30,7 @@
 						@foreach($projects as $project)
 						<tr>
 							<td class="px-4 py-3"><a href="{{ route('projects.show', $project->id) }}">{{ $project->name }}</a></td>
-							<td class="px-4 py-3 text-right">{{ number_format($project->getEvents()->count()) }}</td>
+							<td class="px-4 py-3 text-right">{{ number_format($project->events()->count()) }}</td>
 						</tr>
 						@endforeach
 					</tbody>

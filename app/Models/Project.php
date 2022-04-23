@@ -11,18 +11,20 @@ class Project
 {
 	public string $id;
 	public string $name;
-	protected User $user;
+	public Collection $events;
+	public User $user;
 
 	public function __construct(User $user)
 	{
 		$this->id = $user->humanoID();
 		$this->name = $user->name;
 		$this->user = $user;
+		$this->events = $user->events;
 	}
 
-	public function events(): Collection
+	public function events(): \Illuminate\Database\Eloquent\Relations\HasMany
 	{
-		return $this->user->events()->get();
+		return $this->user->events();
 	}
 
 	public static function all(): Collection
