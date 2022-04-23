@@ -18,6 +18,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::middleware('auth:sanctum')->post('/projects/{project}/events', function (Request $request, string $project) {
+    return 'events';
+})->name('events.store');
+
 Route::post('/ping', function () {
     return response()->json(['message' => 'pong']);
 });
