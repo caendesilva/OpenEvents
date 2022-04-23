@@ -20,7 +20,7 @@ class Project
 		$this->user = $user;
 	}
 
-	public function getEvents(): Collection
+	public function events(): Collection
 	{
 		return $this->user->events()->get();
 	}
