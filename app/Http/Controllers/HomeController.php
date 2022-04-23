@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use OpenEvents\Event;
 
 class HomeController extends Controller
 {
@@ -14,6 +15,8 @@ class HomeController extends Controller
      */
     public function __invoke(Request $request)
     {
+        Event::dispatch('homepage.visit');
+
         return view('welcome');
     }
 }
