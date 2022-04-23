@@ -1306,6 +1306,12 @@ select {
 .max-w-md {
   max-width: 28rem;
 }
+.max-w-xs {
+  max-width: 20rem;
+}
+.max-w-0 {
+  max-width: 0rem;
+}
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -2375,6 +2381,12 @@ select {
 
   .sm\:w-full {
     width: 100%;
+  }
+
+  .sm\:w-fit {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
 
   .sm\:max-w-md {
