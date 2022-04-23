@@ -3,6 +3,7 @@
 namespace App\Policies;
 
 use App\Models\Event;
+use App\Models\Project;
 use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
@@ -16,11 +17,12 @@ class EventPolicy
      * @param  \App\Models\User  $user
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function create(User $user)
+    public function create(User $user, Project $project)
     {
         // @todo implement rules such as request quotas
         
-        return $user->tokenCan('event:create');
+        return $user->id === $project->user->id
+            && $user->tokenCan('event:create');
     }
 
 

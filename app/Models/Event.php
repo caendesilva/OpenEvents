@@ -39,7 +39,7 @@ class Event extends Model
     {
         static::creating(static function (Event $event) {
             if ($event->uuid === null) {
-                $event->uuid = Str::orderedUuid()();
+                $event->uuid = Str::orderedUuid();
             }
         });
     }

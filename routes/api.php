@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EventApiController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -19,7 +20,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::middleware('auth:sanctum')->post('/projects/{project}/events', function (Request $request, string $project) {
-    return 'events';
+    return (new EventApiController)->store($request, $project);
 })->name('events.store');
 
 Route::post('/ping', function () {

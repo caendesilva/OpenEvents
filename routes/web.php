@@ -28,7 +28,6 @@ Route::middleware([
     })->name('dashboard');
 });
 
-
 Route::get('/explore', [ProjectViewController::class, 'index'])
     ->name('projects.index');
 
