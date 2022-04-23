@@ -34,7 +34,7 @@ class ProjectViewController extends Controller
      * @param  string  $project HumanoID
      * @return \Illuminate\View\View
      */
-	public function show(string $project)
+	public function show(string $project, Request $request)
 	{
 		try {
 			$id = app('HumanoIDGenerator')->generator->parse($project);
@@ -42,10 +42,37 @@ class ProjectViewController extends Controller
 			abort(404);
 		}
 
-		$project = new Project(User::findOrFail($id));
+		$project = User::findOrFail($id)->project();
+
+		$limitOptions = [25, 50, 100, 250];
+		$selectedLimit = $this->getLimit($request, $limitOptions);
+
+		$query = $project->events()->orderBy('created_at', 'desc')->take($selectedLimit);
+
+		if ($request->has('event')) {
+			$query->where('event', 'like', '%' . $request->query('event') . '%');
+		}
 
 		return view('project.dashboard', [
 			'project' => $project,
-		]);
+			'events' => $query->get(),
+		], compact('limitOptions', 'selectedLimit'));
+	}
+
+	/**
+	 * Get the limit from the request.
+	 *
+	 * @param  \Illuminate\Http\Request  $request
+	 * @return int
+	 */
+	protected function getLimit(Request $request, array $options = [25]): int
+	{
+		$limit = $request->query('limit', 25);
+
+		if (! in_array($limit, $options)) {
+			$limit = 25;
+		}
+
+		return $limit;
 	}
 }
