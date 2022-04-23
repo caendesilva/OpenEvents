@@ -13,7 +13,8 @@
         "laravel/sanctum": "^2.14.1",
         "laravel/tinker": "^2.7",
         "livewire/livewire": "^2.5",
-        "robthree/humanoid": "^1.0"
+        "robthree/humanoid": "^1.0",
+        "openevents/laravel-client": "dev-master"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
@@ -60,6 +61,10 @@
         "preferred-install": "dist",
         "sort-packages": true
     },
+    "repositories": [{
+        "type": "path",
+        "url": "packages/laravel-client"
+    }],
     "minimum-stability": "dev",
     "prefer-stable": true
 }

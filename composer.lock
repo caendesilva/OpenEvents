@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "176b44dc5eb3ab52fbaee70a76e10dab",
+    "content-hash": "b1bedc6184b23fa2f812fc2afa344881",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -2571,6 +2571,71 @@
             "time": "2021-11-30T19:35:32+00:00"
         },
         {
+            "name": "openevents/laravel-client",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "packages/laravel-client",
+                "reference": "2733140a7901ba93fc5142e4eb748d1079414d1a"
+            },
+            "require": {
+                "illuminate/support": "^9.0",
+                "php": "^8.0.2"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^6.0",
+                "phpunit/phpunit": "^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "OpenEvents\\OpenEventsServiceProvider"
+                    ],
+                    "aliases": {
+                        "OpenEvents": "OpenEvents\\OpenEventsFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "OpenEvents\\": "src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "OpenEvents\\Tests\\": "tests"
+                }
+            },
+            "scripts": {
+                "test": [
+                    "vendor/bin/phpunit"
+                ],
+                "test-coverage": [
+                    "vendor/bin/phpunit --coverage-html coverage"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Caen De Silva",
+                    "email": "caen@desilva.se",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Laravel Client for sending Events to the OpenEvents API",
+            "homepage": "https://github.com/caendesilva/openevents-laravelclient",
+            "keywords": [
+                "laravel",
+                "openevents"
+            ],
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
             "name": "paragonie/constant_time_encoding",
             "version": "v2.5.0",
             "source": {
@@ -3421,16 +3486,16 @@
         },
         {
             "name": "robthree/humanoid",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RobThree/HumanoID.git",
-                "reference": "ed39a4d1e16e010c54c8d03c8244fbbedba0eb9e"
+                "reference": "2db28bc45fed5d1875265c887adcc17a1f30ddd7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RobThree/HumanoID/zipball/ed39a4d1e16e010c54c8d03c8244fbbedba0eb9e",
-                "reference": "ed39a4d1e16e010c54c8d03c8244fbbedba0eb9e",
+                "url": "https://api.github.com/repos/RobThree/HumanoID/zipball/2db28bc45fed5d1875265c887adcc17a1f30ddd7",
+                "reference": "2db28bc45fed5d1875265c887adcc17a1f30ddd7",
                 "shasum": ""
             },
             "require": {
@@ -3477,7 +3542,7 @@
             "description": "Friendly ID generator. Converts integers to words and back",
             "support": {
                 "issues": "https://github.com/RobThree/HumanoID/issues",
-                "source": "https://github.com/RobThree/HumanoID/tree/1.0.0"
+                "source": "https://github.com/RobThree/HumanoID/tree/1.0.1"
             },
             "funding": [
                 {
@@ -3489,7 +3554,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-04-20T20:02:21+00:00"
+            "time": "2022-04-22T23:00:33+00:00"
         },
         {
             "name": "spatie/enum",
@@ -8576,7 +8641,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "graham-campbell/markdown": 20
+        "graham-campbell/markdown": 20,
+        "openevents/laravel-client": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
