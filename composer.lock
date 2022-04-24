@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b1bedc6184b23fa2f812fc2afa344881",
+    "content-hash": "e7ccc2a963e0f74f68deb6feec4d7dd7",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -2573,38 +2573,46 @@
         {
             "name": "openevents/laravel-client",
             "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/caendesilva/openevents-laravel-client.git",
+                "reference": "b1a70d18d6cd61784ae4033a0ef7bc560d6e37a4"
+            },
             "dist": {
-                "type": "path",
-                "url": "packages/laravel-client",
-                "reference": "2733140a7901ba93fc5142e4eb748d1079414d1a"
+                "type": "zip",
+                "url": "https://api.github.com/repos/caendesilva/openevents-laravel-client/zipball/b1a70d18d6cd61784ae4033a0ef7bc560d6e37a4",
+                "reference": "b1a70d18d6cd61784ae4033a0ef7bc560d6e37a4",
+                "shasum": ""
             },
             "require": {
+                "illuminate/http": "^9.0",
                 "illuminate/support": "^9.0",
                 "php": "^8.0.2"
             },
             "require-dev": {
-                "orchestra/testbench": "^6.0",
+                "orchestra/testbench": "^7.0",
                 "phpunit/phpunit": "^9.0"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
                     "providers": [
-                        "OpenEvents\\OpenEventsServiceProvider"
+                        "OpenEvents\\LaravelClient\\OpenEventsServiceProvider"
                     ],
                     "aliases": {
-                        "OpenEvents": "OpenEvents\\OpenEventsFacade"
+                        "OpenEvents": "OpenEvents\\LaravelClient\\OpenEventsFacade"
                     }
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "OpenEvents\\": "src"
+                    "OpenEvents\\LaravelClient\\": "src"
                 }
             },
             "autoload-dev": {
                 "psr-4": {
-                    "OpenEvents\\Tests\\": "tests"
+                    "OpenEvents\\LaravelClient\\Tests\\": "tests"
                 }
             },
             "scripts": {
@@ -2631,9 +2639,11 @@
                 "laravel",
                 "openevents"
             ],
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "source": "https://github.com/caendesilva/openevents-laravel-client/tree/master",
+                "issues": "https://github.com/caendesilva/openevents-laravel-client/issues"
+            },
+            "time": "2022-04-24T16:29:27+00:00"
         },
         {
             "name": "paragonie/constant_time_encoding",
@@ -8429,16 +8439,16 @@
         },
         {
             "name": "spatie/ignition",
-            "version": "1.2.7",
+            "version": "1.2.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/ignition.git",
-                "reference": "2f059cf42b48f7c522efbba1c05ad59fc2c1a3f2"
+                "reference": "db25202fab2d5c14613b8914a1bb374998bbf870"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/ignition/zipball/2f059cf42b48f7c522efbba1c05ad59fc2c1a3f2",
-                "reference": "2f059cf42b48f7c522efbba1c05ad59fc2c1a3f2",
+                "url": "https://api.github.com/repos/spatie/ignition/zipball/db25202fab2d5c14613b8914a1bb374998bbf870",
+                "reference": "db25202fab2d5c14613b8914a1bb374998bbf870",
                 "shasum": ""
             },
             "require": {
@@ -8495,7 +8505,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-03-29T08:48:34+00:00"
+            "time": "2022-04-23T20:37:21+00:00"
         },
         {
             "name": "spatie/laravel-ignition",

@@ -62,8 +62,8 @@
         "sort-packages": true
     },
     "repositories": [{
-        "type": "path",
-        "url": "packages/laravel-client"
+        "type": "vcs",
+        "url": "https://github.com/caendesilva/openevents-laravel-client.git"
     }],
     "minimum-stability": "dev",
     "prefer-stable": true
