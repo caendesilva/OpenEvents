@@ -1,4 +1,4 @@
-<nav class="w-full px-6 pb-12 antialiased bg-white relative z-50 h-24 select-none " x-data="{ showMenu: false }">
+<nav class="w-full px-6 pb-12 antialiased  relative z-50 h-24 select-none " x-data="{ showMenu: false }">
     <div class="container relative  max-w-7xl flex flex-wrap items-center justify-between h-24 mx-auto overflow-hidden font-medium border-gray-200 md:overflow-visible lg:justify-center sm:px-4 md:px-2">
         <div class="flex items-center justify-start w-1/4 h-full pr-4">
             <a href="/" class="inline-flex items-center py-4 md:py-0 ui-sans">

@@ -21,11 +21,11 @@
     <body class="font-sans antialiased">
         <x-jet-banner />
 
-        <div class="flex flex-col min-h-screen bg-gray-100">
+        <div class="flex flex-col min-h-screen bg-white">
             <x-navigation-menu />
 
             <!-- Page Content -->
-            <main class="mb-auto">
+            <main class="py-8 mb-auto">
                 {{ $slot }}
             </main>
 
