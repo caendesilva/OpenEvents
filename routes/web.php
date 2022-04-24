@@ -17,7 +17,7 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/', HomeController::class);
+Route::get('/', HomeController::class)->name('home');
 
 Route::middleware([
     'auth:sanctum',
@@ -30,7 +30,7 @@ Route::middleware([
 });
 
 Route::get('/explore', [ProjectViewController::class, 'index'])
-    ->name('projects.index');
+    ->name('explore');
 
 Route::get('/projects/{project}', function (string $project, Request $request) {
     return (new ProjectViewController)->show($project, $request);
