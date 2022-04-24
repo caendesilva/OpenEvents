@@ -1,10 +1,5 @@
 <x-guest-layout>
     <!-- Components by Tails -->
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
     <!-- Section 1 -->
     <section class="w-full px-6 pb-12 antialiased bg-white">
         <div class="">
@@ -21,7 +16,7 @@
                 </div>
                 <div class="flex flex-row justify-center items-center mt-10 text-center">
                     <span class="relative inline-flex w-full mx-2 md:w-auto">
-                        <a href="#about" class="inline-flex items-center justify-center w-full px-4 py-3 text-base font-bold leading-6 text-indigo-600 border-indigo-600 border border-transparent rounded-full md:w-auto hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"> Learn More </a>
+                        <a href="#about" class="inline-flex items-center justify-center w-full px-4 py-3 text-base font-bold leading-6 text-indigo-600 border-indigo-600 border border-transparent rounded-full md:w-auto hover:bg-indigo-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"> Learn More </a>
                     </span>
                     <span class="relative inline-flex w-full mx-2 md:w-auto">
                         <a href="{{ route('register') }}" class="inline-flex items-center justify-center w-full px-4 py-3 text-base font-bold leading-6 text-white bg-indigo-600 border border-transparent rounded-full md:w-auto hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"> Sign Up </a>
