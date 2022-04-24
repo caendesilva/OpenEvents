@@ -14,14 +14,14 @@ This requires you to be transparent about the analytics data you collect. You al
 
 ## Resources
 
-### License
-OpenEvents is licensed under the [MIT License](https://opensource.org/licenses/MIT).
-
 ### Contributing
 If you want to contribute to the OpenEvents project, please open an issue or pull request.
 
 ### Security
 If you discover any security-related issues, please email caen@desilva.se instead of using the issue tracker. All vulnerabilities will be promptly addressed.
 
-### Warranty, Liability, and Support
+### License
+OpenEvents is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+
+### Disclaimer
 OpenEvents including but not limited to the API, service, and code, are provided "as is" and without warranty of any kind. Usage of the hosted service and API is subject to the terms of service.
