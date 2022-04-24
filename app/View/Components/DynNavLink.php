@@ -16,10 +16,10 @@ class DynNavLink extends Component
      *
      * @return void
      */
-    public function __construct(string $for)
+    public function __construct(string $for, ?string $name = null)
     {
         $this->href = route($for);
-        $this->name = Str::title($for);
+        $this->name = $name ?? Str::title($for);
         $this->active = request()->routeIs($for);
     }
 
