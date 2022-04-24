@@ -10,3 +10,5 @@ For example:
 
 What's important to note is that all events are public, including the context string.
 It is a violation of the terms of service to collect sensitive or personally identifying data.
+
+You can use the Pineprint helper to generate a human-readable psuedo-hashsum. For example, you can turn a string like `request_user_id` to `pineprint-subgiant-cigar`. The Pineprint algorithm is event-specific, so for this example, the user cannot be tracked between different events.

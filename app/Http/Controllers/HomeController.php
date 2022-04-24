@@ -30,6 +30,8 @@ class HomeController extends Controller
 
         $integer = (new Pineprint($modifier))->getInteger();
 
-        return 'pineprint-' . app('HumanoIDGenerator')->generator->create($integer % 1000);
+        return json_encode([
+            'request_pineprint' => substr(app('HumanoIDGenerator')->generator->create($integer % 1000), 0, 64)
+        ]);
     }
 }
