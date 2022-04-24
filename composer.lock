@@ -2576,12 +2576,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/caendesilva/openevents-laravel-client.git",
-                "reference": "b1a70d18d6cd61784ae4033a0ef7bc560d6e37a4"
+                "reference": "2471ab98f97b0b46fe3fb179f3f3e26747065ec9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/caendesilva/openevents-laravel-client/zipball/b1a70d18d6cd61784ae4033a0ef7bc560d6e37a4",
-                "reference": "b1a70d18d6cd61784ae4033a0ef7bc560d6e37a4",
+                "url": "https://api.github.com/repos/caendesilva/openevents-laravel-client/zipball/2471ab98f97b0b46fe3fb179f3f3e26747065ec9",
+                "reference": "2471ab98f97b0b46fe3fb179f3f3e26747065ec9",
                 "shasum": ""
             },
             "require": {
@@ -2643,7 +2643,7 @@
                 "source": "https://github.com/caendesilva/openevents-laravel-client/tree/master",
                 "issues": "https://github.com/caendesilva/openevents-laravel-client/issues"
             },
-            "time": "2022-04-24T16:29:27+00:00"
+            "time": "2022-04-24T18:47:05+00:00"
         },
         {
             "name": "paragonie/constant_time_encoding",
