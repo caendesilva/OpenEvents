@@ -26,3 +26,7 @@ The platform is provided "as is" without a warranty of any kind. During the beta
 
 ## Disclaimer
 I am a developer and a student, not a lawyer. This is a project for practice and education that I am making in my spare time and for fun. I'm acting in good faith, and hope that you are too.
+
+## Legal disclaimer
+
+OpenEvents makes no warranties, express or implied, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose. OpenEvents does not warrant that the API, service, or code is error-free or that access to the API, service, or code will be uninterrupted or error-free. OpenEvents shall not be liable for any direct, indirect, incidental, special, consequential, or other damages, including but not limited to, damages for loss of profits, goodwill, use, data, or other intangible losses, resulting from the use of or inability to use the API, service, or code, even if OpenEvents has been advised of the possibility of such damages.
