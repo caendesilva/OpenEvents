@@ -1930,6 +1930,9 @@ select {
 .leading-none {
   line-height: 1;
 }
+.leading-8 {
+  line-height: 2rem;
+}
 .tracking-widest {
   letter-spacing: 0.1em;
 }
@@ -2548,6 +2551,10 @@ select {
     margin-left: 1.5rem;
   }
 
+  .sm\:mb-0 {
+    margin-bottom: 0px;
+  }
+
   .sm\:block {
     display: block;
   }
@@ -2828,6 +2835,10 @@ select {
     margin-right: 1rem;
   }
 
+  .md\:mt-8 {
+    margin-top: 2rem;
+  }
+
   .md\:block {
     display: block;
   }
@@ -3009,6 +3020,15 @@ select {
     line-height: 2rem;
   }
 
+  .md\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .md\:leading-10 {
+    line-height: 2.5rem;
+  }
+
   .md\:opacity-100 {
     opacity: 1;
   }
@@ -3119,6 +3139,15 @@ select {
   .lg\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+
+  .lg\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+
+  .lg\:leading-10 {
+    line-height: 2.5rem;
   }
 }
 @media (min-width: 1280px) {
