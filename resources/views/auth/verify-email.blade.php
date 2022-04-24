@@ -1,7 +1,7 @@
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-            <x-jet-authentication-card-logo />
+            <h1 class="text-4xl font-bold mt-4 sm:mt-8 md:mt-12">Verify Account</h1>
         </x-slot>
 
         <div class="mb-4 text-sm text-gray-600">
@@ -14,6 +14,9 @@
             </div>
         @endif
 
+        @production
+         
+        @else
         <div class="mt-4 flex items-center justify-between">
             <form method="POST" action="{{ route('verification.send') }}">
                 @csrf
@@ -33,5 +36,6 @@
                 </button>
             </form>
         </div>
+        @endproduction
     </x-jet-authentication-card>
 </x-guest-layout>
