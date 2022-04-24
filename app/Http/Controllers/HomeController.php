@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use OpenEvents\Event;
+use OpenEvents\LaravelClient\Event;
 
 class HomeController extends Controller
 {
