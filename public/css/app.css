@@ -2558,6 +2558,10 @@ select {
     margin-left: auto;
   }
 
+  .sm\:mr-4 {
+    margin-right: 1rem;
+  }
+
   .sm\:block {
     display: block;
   }
@@ -2675,6 +2679,10 @@ select {
     border-left-width: 1px;
   }
 
+  .sm\:border-r {
+    border-right-width: 1px;
+  }
+
   .sm\:border-gray-200 {
     --tw-border-opacity: 1;
     border-color: rgb(229 231 235 / var(--tw-border-opacity));
@@ -2729,6 +2737,10 @@ select {
 
   .sm\:pl-4 {
     padding-left: 1rem;
+  }
+
+  .sm\:pr-4 {
+    padding-right: 1rem;
   }
 
   .sm\:text-left {

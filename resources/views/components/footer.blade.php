@@ -1,10 +1,16 @@
 <footer class="text-gray-700 bg-white body-font">
     <div class="container flex flex-col items-center px-8 py-8 mx-auto max-w-7xl sm:flex-row">
-        <a href="#_" class="text-xl font-black leading-none text-gray-900 select-none logo">{{ config('app.name') }}<span class="text-indigo-600">.</span></a>
+        <a href="/" class="text-xl font-black leading-none text-gray-900 select-none logo ui-sans">{{ config('app.name') }}<span class="text-indigo-600">.</span></a>
         <p class="mt-4 text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l sm:border-gray-200 sm:mt-0">
             © 2022 {{ config('app.name') }}
         </p>
+
         <span class="inline-flex justify-center mt-4 space-x-5 sm:ml-auto sm:mt-0 sm:justify-start">
+            <p class="mt-4 text-sm text-gray-500 sm:border-r sm:border-gray-200 sm:mt-0  sm:mr-4 sm:pr-4 " >
+                <a href="{{ route('policy.show') }}" class="text-gray-500 hover:text-gray-900 mx-2">Privacy Policy</a>
+                <a href="{{ route('terms.show') }}" class="text-gray-500 hover:text-gray-900 mx-2">Terms of Service</a>
+            </p>
+    
             <a href="https://twitter.com/StressedDev" class="text-gray-400 hover:text-gray-500">
                 <span class="sr-only">Twitter</span>
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -20,10 +26,4 @@
             </a>
         </span>
     </div>
-    <div class="mb-4 text-base leading-6 text-center text-gray-500">
-        <small>
-            OpenEvents is currently in beta and comes with no warranties or guarantees whatsoever.
-        </small>
-    </div>
-  
 </footer>
