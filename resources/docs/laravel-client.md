@@ -6,8 +6,34 @@ The Laravel Client even ships with a connection driver that stores events in you
 
 ## Installation
 
-> Will be added when the package is released.
+Install with Composer:
 
+```bash
+composer require openevents/laravel-client
+```
+
+Publish the config file:
+```bash
+php artisan vendor:publish --provider="OpenEvents\LaravelClient\OpenEventsServiceProvider"
+```
+
+Next, add your API token and endpoint to your .env file.
+```ini
+OPENEVENTS_TOKEN=api_secret_token
+OPENEVENTS_ENDPOINT=https://your-api-endpoint.com/api/v1/events
+```
+
+You are now ready to start sending events to the API!
+
+## Usage
+
+Dispatch events using the Event facade:
+
+```php
+use OpenEvents\LaravelClient\Event;
+
+Event::dispatch('my-event', 'optional-context-data');
+```
 
 ---
 
@@ -45,8 +71,17 @@ The driver expects the following columns:
 'time':  integer|null // (UNIX Epoch Timestamp)
 'sent':  boolean|null // (Has the event been sent to the API?)
 ```
-
 > Note that backdating is not implemented yet, but is added for future compatibility.
+
+
+The events you send must follow the following validation rules:
+
+```php
+[
+	'event' => 'required|string|max:32',
+	'value' => 'nullable|string|max:128',
+];
+```
 
 The database table name is defined in the connection class:
 ```php
