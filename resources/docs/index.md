@@ -1,3 +1,9 @@
+---
+label: Introduction
+priority: 1
+source: https://github.com/caendesilva/OpenEvents/blob/master/resources/docs/index.md
+---
+
 # OpenEvents API Documentation
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, [dapibus sed](#) suscipit [eget](#) quam. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Quisque velit nisi, pretium ut lacinia in, elementum id enim. 

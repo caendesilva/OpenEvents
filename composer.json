@@ -2,10 +2,14 @@
     "name": "laravel/laravel",
     "type": "project",
     "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "keywords": [
+        "framework",
+        "laravel"
+    ],
     "license": "MIT",
     "require": {
         "php": "^8.0.2",
+        "desilva/lagrafo": "dev-master",
         "graham-campbell/markdown": "14.0.x-dev",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^9.2",
@@ -13,8 +17,8 @@
         "laravel/sanctum": "^2.14.1",
         "laravel/tinker": "^2.7",
         "livewire/livewire": "^2.5",
-        "robthree/humanoid": "^1.0",
-        "openevents/laravel-client": "dev-master"
+        "openevents/laravel-client": "dev-master",
+        "robthree/humanoid": "^1.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
@@ -61,10 +65,16 @@
         "preferred-install": "dist",
         "sort-packages": true
     },
-    "repositories": [{
-        "type": "vcs",
-        "url": "https://github.com/caendesilva/openevents-laravel-client.git"
-    }],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/caendesilva/openevents-laravel-client.git"
+        },
+        {
+            "type": "path",
+            "url": "packages/lagrafo"
+        }
+    ],
     "minimum-stability": "dev",
     "prefer-stable": true
 }

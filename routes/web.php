@@ -35,7 +35,3 @@ Route::get('/explore', [ProjectViewController::class, 'index'])
 Route::get('/projects/{project}', function (string $project, Request $request) {
     return (new ProjectViewController)->show($project, $request);
 })->name('projects.show');
-
-Route::get('/docs/{page?}', function (string $page = null) {
-    return (new DocsController)->show($page);
-})->name('docs');
