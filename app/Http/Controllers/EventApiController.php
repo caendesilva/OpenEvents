@@ -28,12 +28,12 @@ class EventApiController extends Controller
 
         $this->validate($request, [
             'event' => 'required|string|max:32',
-            'value' => 'nullable|string|max:128',
+            'data' => 'nullable|string|max:128',
         ]);
 
         $event = $user->events()->create([
             'event' => $request->event,
-            'value' => $request->value,
+            'data' => $request->data,
         ]);
 
         return response()->json([
