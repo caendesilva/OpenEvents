@@ -28,6 +28,10 @@ class HomeController extends Controller
             'user_agent' => $request->userAgent(),
         ]);
 
+        if ($request->user()) {
+            $modifier .= $request->user()->id;
+        }
+
         $integer = (new Pineprint($modifier))->getInteger();
 
         return json_encode([
