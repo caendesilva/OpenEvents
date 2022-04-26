@@ -1,5 +1,5 @@
 <footer class="text-gray-700 body-font">
-    <div class="container flex  flex-col items-center px-8 py-8 mx-auto max-w-7xl md:flex-row">
+    <div class="container flex  flex-col items-center px-8 py-8 mx-auto max-w-7xl lg:flex-row">
         <div class="whitespace-nowrap">
             <a href="/" class="text-xl font-black leading-none text-gray-900 select-none logo ui-sans">
                 {{ config('app.name') }}<span class="text-indigo-600">.</span>
@@ -9,8 +9,11 @@
             </small>
         </div>
 
-        <div class="inline-flex justify-center mt-6 md:ml-auto md:mt-0 md:justify-start">
-            <ul class="whitespace-nowrap flex items-center mt-4 text-sm text-gray-500 sm:border-r sm:border-gray-200 sm:mt-0  sm:mr-4 sm:pr-4 " >
+        <div class="inline-flex flex-col md:flex-row justify-center mt-6 lg:ml-auto lg:mt-0 lg:justify-start">
+            <ul class="order-2 md:order-1 whitespace-nowrap justify-center flex-wrap flex items-center  mt-4 text-sm text-gray-500 sm:border-r sm:border-gray-200 sm:mt-0  sm:mr-4 sm:pr-4 " >
+                <li>
+                    <a href="{{ route('docs') }}" class="text-gray-500 hover:text-gray-900 mx-2">API Documentation</a>
+                </li>
                 <li>
                     <a href="{{ route('policy.show') }}" class="text-gray-500 hover:text-gray-900 mx-2">Privacy Policy</a>
                 </li>
@@ -19,7 +22,7 @@
                 </li>
             </ul>
     
-            <ul class="whitespace-nowrap flex items-center ml-0 mt-4 sm:mt-0">
+            <ul class="order-1 md:order-2  whitespace-nowrap flex  justify-center items-center ml-0 mt-4 mb-4 sm:mt-0  md:mb-0">
                 <li class="mx-2">
                     <a href="https://twitter.com/StressedDev" class="text-gray-400 hover:text-gray-500">
                         <span class="sr-only">Twitter</span>

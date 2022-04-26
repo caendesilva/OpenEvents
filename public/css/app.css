@@ -1038,6 +1038,12 @@ select {
 .z-50 {
   z-index: 50;
 }
+.order-2 {
+  order: 2;
+}
+.order-1 {
+  order: 1;
+}
 .col-span-6 {
   grid-column: span 6 / span 6;
 }
@@ -2610,6 +2616,14 @@ select {
     position: relative;
   }
 
+  .md\:order-2 {
+    order: 2;
+  }
+
+  .md\:order-1 {
+    order: 1;
+  }
+
   .md\:col-span-2 {
     grid-column: span 2 / span 2;
   }
@@ -2641,6 +2655,10 @@ select {
 
   .md\:ml-auto {
     margin-left: auto;
+  }
+
+  .md\:mb-0 {
+    margin-bottom: 0px;
   }
 
   .md\:inline-block {
@@ -2813,12 +2831,24 @@ select {
     margin-right: 1.25rem;
   }
 
+  .lg\:ml-auto {
+    margin-left: auto;
+  }
+
   .lg\:inline {
     display: inline;
   }
 
   .lg\:w-5\/6 {
     width: 83.333333%;
+  }
+
+  .lg\:flex-row {
+    flex-direction: row;
+  }
+
+  .lg\:justify-start {
+    justify-content: flex-start;
   }
 
   .lg\:justify-center {
