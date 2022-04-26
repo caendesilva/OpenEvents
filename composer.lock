@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "93cdf1f248a2f2bc990eafefc8cb729a",
+    "content-hash": "3526785c517acbb721e5ebee833c268d",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -170,10 +170,16 @@
         {
             "name": "desilva/lagrafo",
             "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/caendesilva/lagrafo.git",
+                "reference": "5d00a956d8c0b3fb65cd045cf4278d81c190ead1"
+            },
             "dist": {
-                "type": "path",
-                "url": "packages/lagrafo",
-                "reference": "7e1903bbc1a47a81f60459cb1211fa2dd97871f7"
+                "type": "zip",
+                "url": "https://api.github.com/repos/caendesilva/lagrafo/zipball/5d00a956d8c0b3fb65cd045cf4278d81c190ead1",
+                "reference": "5d00a956d8c0b3fb65cd045cf4278d81c190ead1",
+                "shasum": ""
             },
             "require": {
                 "illuminate/support": "^9.0",
@@ -186,6 +192,7 @@
                 "orchestra/testbench": "^7.0",
                 "phpunit/phpunit": "^9.0"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -202,19 +209,7 @@
                     "DeSilva\\Lagrafo\\": "src"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "DeSilva\\Lagrafo\\Tests\\": "tests"
-                }
-            },
-            "scripts": {
-                "test": [
-                    "vendor/bin/phpunit tests"
-                ],
-                "test-coverage": [
-                    "vendor/bin/phpunit tests --coverage-html coverage"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -233,9 +228,11 @@
                 "lagrafo",
                 "laravel"
             ],
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "issues": "https://github.com/caendesilva/lagrafo/issues",
+                "source": "https://github.com/caendesilva/lagrafo/tree/v0.1.1-beta"
+            },
+            "time": "2022-04-26T15:27:13+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
@@ -1969,16 +1966,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "3.0.17",
+            "version": "3.0.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "29eb78cac0be0c22237c5e0f6f98234d97037d79"
+                "reference": "c8e137e594948240b03372e012344b07c61b9193"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/29eb78cac0be0c22237c5e0f6f98234d97037d79",
-                "reference": "29eb78cac0be0c22237c5e0f6f98234d97037d79",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/c8e137e594948240b03372e012344b07c61b9193",
+                "reference": "c8e137e594948240b03372e012344b07c61b9193",
                 "shasum": ""
             },
             "require": {
@@ -2039,7 +2036,7 @@
             ],
             "support": {
                 "issues": "https://github.com/thephpleague/flysystem/issues",
-                "source": "https://github.com/thephpleague/flysystem/tree/3.0.17"
+                "source": "https://github.com/thephpleague/flysystem/tree/3.0.18"
             },
             "funding": [
                 {
@@ -2055,7 +2052,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-04-14T14:57:13+00:00"
+            "time": "2022-04-25T18:55:04+00:00"
         },
         {
             "name": "league/mime-type-detection",
@@ -2680,19 +2677,7 @@
                     "OpenEvents\\LaravelClient\\": "src"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "OpenEvents\\LaravelClient\\Tests\\": "tests"
-                }
-            },
-            "scripts": {
-                "test": [
-                    "vendor/bin/phpunit"
-                ],
-                "test-coverage": [
-                    "vendor/bin/phpunit --coverage-html coverage"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2710,8 +2695,8 @@
                 "openevents"
             ],
             "support": {
-                "source": "https://github.com/caendesilva/openevents-laravel-client/tree/master",
-                "issues": "https://github.com/caendesilva/openevents-laravel-client/issues"
+                "issues": "https://github.com/caendesilva/openevents-laravel-client/issues",
+                "source": "https://github.com/caendesilva/openevents-laravel-client/tree/v0.1.0-alpha"
             },
             "time": "2022-04-24T18:57:41+00:00"
         },

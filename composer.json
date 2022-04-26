@@ -65,16 +65,6 @@
         "preferred-install": "dist",
         "sort-packages": true
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/caendesilva/openevents-laravel-client.git"
-        },
-        {
-            "type": "path",
-            "url": "packages/lagrafo"
-        }
-    ],
     "minimum-stability": "dev",
     "prefer-stable": true
 }
