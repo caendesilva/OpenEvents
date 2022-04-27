@@ -10,8 +10,7 @@ source: https://github.com/caendesilva/OpenEvents/blob/master/resources/docs/ind
 
 Welcome to OpenEvents! This is the documentation for the OpenEvents API and its integrations.
 
-OpenEvents is an event-driven analytics platform. What this means in practice is that you decide
-what data to collect and when you want to collect it.
+OpenEvents is a server-side event-driven analytics platform where <mark>you</mark> decide what analytics data you want to collect.
 
 
 ## Getting started
