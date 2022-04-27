@@ -6,40 +6,33 @@ source: https://github.com/caendesilva/OpenEvents/blob/master/resources/docs/ind
 
 # OpenEvents API Documentation
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, [dapibus sed](#) suscipit [eget](#) quam. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Quisque velit nisi, pretium ut lacinia in, elementum id enim. 
-
-## Table of Contents
-
-* [Introduction](#introduction)
-* [Endpoints](#endpoints)
-* [Authentication](#authentication)
-* [Error Handling](#error-handling)
-* [Response Format](#response-format)
-* [Examples](#examples)
-
 ## Introduction
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, [dapibus sed](#) suscipit [eget](#) quam. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Quisque velit nisi, pretium ut lacinia in, elementum id enim. 
+Welcome to OpenEvents! This is the documentation for the OpenEvents API and its integrations.
 
-## Endpoints 
+OpenEvents is an event-driven analytics platform. What this means in practice is that you decide
+what data to collect and when you want to collect it.
 
 
-### /events
+## Getting started
+> This is just a high-level overview. For more in-depth documentation, see the [getting started page](/getting-started).
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, [dapibus sed](#) suscipit [eget](#) quam. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Quisque velit nisi, pretium ut lacinia in, elementum id enim. 
+### Create an account and API token
 
-### /events/{event_id}
+To get started, you need to [create an account](/register).
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, [dapibus sed](#) suscipit [eget](#) quam. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Quisque velit nisi, pretium ut lacinia in, elementum id enim. 
+Once you have an account, you need to create an API token on your [API dashboard](/user/api-tokens).
 
-### /events/{event_id}/attendees
+### Sending your first event
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, [dapibus sed](#) suscipit [eget](#) quam. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Quisque velit nisi, pretium ut lacinia in, elementum id enim. 
+Events are created by sending a JSON request to your project API endpoint.
+Here is an example object:
+```json
+{
+  "event": "test_page_view", // A description key of the event
+  "data": "https://example.com/about" // Optional arbitrary context data
+}
+```
 
-### /events/{event_id}/attendees/{attendee_id}
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, [dapibus sed](#) suscipit [eget](#) quam. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Quisque velit nisi, pretium ut lacinia in, elementum id enim. 
-
-### /events/{event_id}/attendees/{attendee_id}/checkin
-
-Lorem ipsum dolor sit amet, consectetur
+### Viewing your events
+You can see all your events on your [events dashboard](/explore).
