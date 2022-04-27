@@ -15,7 +15,7 @@ what data to collect and when you want to collect it.
 
 
 ## Getting started
-> This is just a high-level overview. For more in-depth documentation, see the [getting started page](/getting-started).
+> This is just a high-level overview. For more in-depth documentation, see the [getting started page](getting-started).
 
 ### Create an account and API token
 
