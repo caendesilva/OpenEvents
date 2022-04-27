@@ -1,6 +1,10 @@
+---
+label: Using the Laravel Client
+---
+
 # Server-side analytics with the Laravel Client
 
-To make it dead simple to send server-side events to the API, you can use first-party client package for Laravel.
+To make it dead simple to send server-side events to the API, you can use the first-party client package for Laravel.
 
 The Laravel Client even ships with a connection driver that stores events in your local database for redundancy and/or backup, as well as for sending events to the API asynchronously.
 
@@ -20,7 +24,7 @@ php artisan vendor:publish --provider="OpenEvents\LaravelClient\OpenEventsServic
 Next, add your API token and endpoint to your .env file.
 ```ini
 OPENEVENTS_TOKEN=api_secret_token
-OPENEVENTS_ENDPOINT=https://your-api-endpoint.com/api/v1/events
+OPENEVENTS_ENDPOINT=<replace_with_your_endpoint> # [tl! highlight .auth-highlight]
 ```
 
 You are now ready to start sending events to the API!
@@ -44,7 +48,7 @@ Event::dispatch('my-event', 'optional-context-data');
 ### Introduction
 The Laravel client ships with a connection method that allows you to store Events in your local Laravel database.
 
-Some ideas what you can use this for:
+Some ideas on what you can use this feature for:
 
  - Keep events for redundancy and/or backup.
  - For testing, debug, and development purposes.
@@ -78,8 +82,8 @@ The events you send must follow the following validation rules:
 
 ```php
 [
-	'event' => 'required|string|max:32',
-	'value' => 'nullable|string|max:128',
+    'event' => 'required|string|max:32',
+    'value' => 'nullable|string|max:128',
 ];
 ```
 
@@ -110,8 +114,8 @@ You may want to use this UUID to consolidate events in your database.
 // The following snippet is a pseudo-code example where an 
 // Eloquent model has a method converting it to an OpenEvents\Event class.
 $event = EloquentEventModel::create([
-	'event' => 'MyEventName',
-	'value' => 'MyPayload',
+    'event' => 'MyEventName',
+    'value' => 'MyPayload',
 ]);
 
 $response = $event->toOpenEvent()->dispatchEvent()->getResponse();
