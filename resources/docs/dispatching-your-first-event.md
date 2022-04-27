@@ -1,8 +1,9 @@
 ---
 priority: 3
+label: Dispatching your first Event
 ---
 
-# Dispatching your first event
+# Dispatching your first Event
 
 
 First, get your endpoint. You can always find it on your [account settings](/user/profile) page.
