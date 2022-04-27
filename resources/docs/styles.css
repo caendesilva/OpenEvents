@@ -1,0 +1,10 @@
+code .auth-highlight {
+	background: none !important;
+}
+.auth code .auth-highlight {
+	background: rgba(0, 0, 60, 0.25)  !important;
+}
+.auth code .auth-highlight::after {
+	content: "🌌";
+	user-select: none;
+}
