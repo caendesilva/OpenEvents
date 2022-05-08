@@ -16,12 +16,12 @@ class HomeController extends Controller
      */
     public function __invoke(Request $request)
     {
-        Event::dispatch('homepage.visit', $this->pineprint($request));
+        Event::dispatch('homepage.visit', self::pineprint($request));
 
         return view('welcome');
     }
 
-    protected function pineprint(Request $request)
+    public static function pineprint(Request $request, ?string $modifierKey = null)
     {
         $modifier = json_encode([
             'ip' => $request->ip(),
@@ -30,6 +30,10 @@ class HomeController extends Controller
 
         if ($request->user()) {
             $modifier .= $request->user()->id;
+        }
+
+        if ($modifierKey) {
+            $modifier .= $modifierKey;
         }
 
         $integer = (new Pineprint($modifier))->getInteger();
