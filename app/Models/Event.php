@@ -18,6 +18,7 @@ class Event extends Model
     protected $fillable = [
         'event', // The name of the event
         'data', // Any extra event data
+        'is_verified' // Was the event dispatch signed with an API token?
     ];
     
     /**
@@ -28,6 +29,7 @@ class Event extends Model
     protected $casts = [
         'event' => 'string',
         'data' => 'string',
+        'is_verified' => 'boolean'
     ];
 
      /**
