@@ -34,6 +34,7 @@ class EventApiController extends Controller
         $event = $user->events()->create([
             'event' => $request->event,
             'data' => $request->data,
+            'is_verified' => true,
         ]);
 
         return response()->json([
