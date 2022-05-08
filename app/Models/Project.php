@@ -32,6 +32,11 @@ class Project
 		return route('events.store', ['project' => $this->id]);
 	}
 
+	public function getPixel(): string
+	{
+		return route('pixel.show', ['project' => $this->id]);
+	}
+
 	public static function all(): Collection
 	{
 		return User::all();

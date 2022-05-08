@@ -88,6 +88,15 @@
             <x-jet-input id="id" type="text" class="mt-1 block w-full" value="{{ Auth::user()->project()->getEndpoint() }}" readonly/>
             <small>{{ __('This is where you send your API requests.') }}</small>
         </div>
+
+        <!-- Pixel -->
+        <div class="col-span-6 sm:col-span-4">
+            <x-jet-label for="id">
+                {{ __('Your Pixel') }} <sup title="This cannot be changed">(readonly)</sup>
+            </x-jet-label>
+            <x-jet-input id="id" type="text" class="mt-1 block w-full" value="{{ Auth::user()->project()->getPixel() }}" readonly/>
+            <small>{{ __('You can use this to dispatch events from your frontend.') }}</small>
+        </div>
     </x-slot>
 
     <x-slot name="actions">
