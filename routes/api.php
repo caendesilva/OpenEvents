@@ -1,8 +1,9 @@
 <?php
 
 use App\Http\Controllers\EventApiController;
-use Illuminate\Http\Request;
+use App\Http\Controllers\PixelController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +23,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::middleware('auth:sanctum')->post('/projects/{project}/events', function (Request $request, string $project) {
     return (new EventApiController)->store($request, $project);
 })->name('events.store');
+
+Route::get('/projects/{project}/pixel', function (Request $request, string $project) {
+    return (new PixelController)->show($request, $project);
+})->name('pixel.show');
+
 
 Route::post('/ping', function () {
     return response()->json(['message' => 'pong']);
