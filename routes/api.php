@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\EventApiController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PixelController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
@@ -31,4 +32,11 @@ Route::get('/projects/{project}/pixel', function (Request $request, string $proj
 
 Route::post('/ping', function () {
     return response()->json(['message' => 'pong']);
+});
+
+Route::match(['get', 'post'], '/pineprint', function (Request $request) {
+    return response()->json([
+        'message' => 'Here is your Pineprint',
+        'pineprint' => HomeController::pineprint($request, $request->input('modifier')),
+    ]);
 });
